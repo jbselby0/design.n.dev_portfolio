@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" author="Jacob B Selby">
+    <title>About Jacob B Selby</title>
+    <style>
+        /* Apply basic styling to remove link text decoration */
+        a {
+            text-decoration: none;
+        }
+        
+        body{
+            margin: 0;
+        }
+
+        /* Style the header */
+        header {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally within the header */
+            /* was too much background-color: #333; Dark background color */
+            color: #333; /* Dark Text color */
+            padding: 8px;
+            text-align: center;
+            top: 8px;
+            width: 100%;
+        }
+
+        h1{
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #title {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            justify-items: start;
+            padding: 8px;
+        }
+
+        /* Style the navigation links */
+        nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+            justify-items: center;
+            width: fit-content;
+            max-width: 88%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 430px) {
+            nav {
+                grid-template-columns: repeat(2, 1fr); /* Adjust columns for mobile display */
+                max-width: 100%; /* Ensure full-width for mobile */
+                justify-items: start;
+            }
+
+            header {
+                margin: 0;
+            }
+
+            #title {
+                padding: 0;
+            }
+
+            main img {
+            display: block; /* Makes the image a block-level element */
+            margin: 0 auto; /* Centers the image horizontally */
+            width: 282px;
+            height: 423px;
+        }
+        }
+
+        /* Add rounded corners to the links */
+        nav a {
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 8px 16px;
+            display: block;
+            text-align: center;
+            color: #333;
+            transition: background-color 0.2s;
+        }
+
+        /* Change link background color on hover */
+        nav a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Style the main content */
+        main {
+            background-color: #f5f5f5; /* Very light grey background color */
+            padding: 16px;
+            margin-top: 24px; /* Add margin to avoid content overlap with the fixed header */
+        }
+
+       
+
+
+        footer{
+            display: flex;
+            padding: .5rem 0px;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: .75rem;
+        }
+
+    </style>
+    <!-- Script for an animated navigation, currently not working <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var main = document.querySelector('main');
+            var scrollPosition = window.scrollY;
+
+            // Adjust this value to determine when the header becomes fixed
+            var threshold = 160; // For example, after scrolling 160 pixels
+
+            if (scrollPosition >= threshold) {
+                header.classList.add('fixed-header');
+                main.style.marginTop = header.offsetHeight + 'px';
+            } else {
+                header.classList.remove('fixed-header');
+                main.style.marginTop = 0;
+            }
+        });
+    </script> -->
+</head>
+<body>
+    <!-- Header with name and career -->
+    <header>
+        <div id="title">
+            <h1>Jacob B Selby</h1>
+            <p>UX Designer</p>
+        </div>
+        <nav>
+            <a href="#whereILive">Where I Live</a>
+            <a href="#myDegree">My Degree</a>
+            <a href="#myHobbies">My Hobbies</a>
+            <a href="#intenseFacts">Intense Facts</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <img src="https://github.com/jbselby0/ux_portfolio/blob/main/IMG_8052.jpeg?raw=true" alt="Image of Jacob B Selby in 2023" width="384px" height="576px">
+        <!-- Section 1: Where I Live -->
+        <section id="whereILive">
+            <h2>Where I Live</h2>
+            <p>I live in Northwestern Oklahoma, the birthplace of the outlaw and American cowboy! I want to move to New England or Toronto, Canada; where I would have better job opportunities and ✨shopping✨.</p>
+        </section>
+
+        <!-- Section 2: My Degree -->
+        <section id="myDegree">
+            <h2>My Degree</h2>
+            <p>I am currently get a bachelor's degree in Graphical Information Technology - User Experience. I hope to get a lead UX Design at a video game studio or a full stack design studio in the next 3 years.</p>
+        </section>
+
+        <!-- Section 3: My Hobbies -->
+        <section id="myHobbies">
+            <h2>My Hobbies</h2>
+            <p>Video Games: Starfield, Fortnite, and Red Dead Redemption 2</p>
+            <p>Books: Anything published by Tor but right now I am reading the Sword of Truth series by Terry Goodking.</p>
+            <p>Recreational: Canoeing, kayaking, hiking, and wilderness camping.</p>
+        </section>
+
+        <!-- Section 4: Intense Facts -->
+        <section id="intenseFacts">
+            <h2>Intense Facts</h2>
+            <p>I married my high school sweetheart and we are awaiting our second child. I grew up in a cult. I had learning disabilities until 8th grade when I learned speed reading which allowed me a post graduate comprehension level. In 2021 my favorite color was gray.</p>
+        </section>
+
+        <footer>
+            <p>Copyright © Silver Tree Studio</p>
+            <a href="mailto:jacob.selby@silvertree.studio">Email me</a>
+        </footer>
+    </main>
+</body>
+</html>
