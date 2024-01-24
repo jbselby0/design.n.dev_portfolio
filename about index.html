@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" author="Jacob B Selby">
+    <meta charset="UTF-8">
+    <meta name="author" content="Jacob B Selby">
     <title>About Jacob B Selby</title>
     <style>
-        /* Apply basic styling to remove link text decoration */
+        @font-face {
+            font-family: 'Belda';
+            src: url('insigne - Belda Norm Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('Poppins-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Poppins-semi';
+            src: url('Poppins-SemiBold.woff2') format('woff2');
+        }
+
         a {
             text-decoration: none;
         }
         
         body{
+            font-family: 'Poppins';
             margin: 0;
         }
 
-        /* Style the header */
         header {
             display: flex;
             flex-direction: column; /* Stack elements vertically */
@@ -27,7 +42,14 @@
         }
 
         h1{
+            font-family: 'Belda';
             font-weight: bold;
+            margin: 0;
+        }
+
+        h2{
+            font-family: 'Poppins-semi';
+            font-weight: normal;
             margin: 0;
         }
 
@@ -71,6 +93,8 @@
             margin: 0 auto; /* Centers the image horizontally */
             width: 282px;
             height: 423px;
+            border: 2 solid;
+            border-radius: 8px;
         }
         }
 
@@ -96,6 +120,12 @@
             background-color: #f5f5f5; /* Very light grey background color */
             padding: 16px;
             margin-top: 24px; /* Add margin to avoid content overlap with the fixed header */
+        }
+
+        iframe {
+            border: 2 solid;
+            border-radius: 8px;
+            width: max-content;
         }
 
        
@@ -134,14 +164,15 @@
     <!-- Header with name and career -->
     <header>
         <div id="title">
-            <h1>Jacob B Selby</h1>
-            <p>UX Designer</p>
+            <h1>Jacob B. Selby</h1>
+            <p>Product Designer &amp; Developer</p>
         </div>
         <nav>
             <a href="#whereILive">Where I Live</a>
             <a href="#myDegree">My Degree</a>
-            <a href="#myHobbies">My Hobbies</a>
+            <a href="#myHobbies">My Passions</a>
             <a href="#intenseFacts">Intense Facts</a>
+            <!-- <a href="https://music.apple.com/us/playlist/the-vibe/pl.u-oZyllDlsGEqpZrb">My Playlist &#x1f517;</a> -->
         </nav>
     </header>
 
@@ -160,7 +191,7 @@
             <p>I am currently get a bachelor's degree in Graphical Information Technology - User Experience. I hope to get a lead UX Design at a video game studio or a full stack design studio in the next 3 years.</p>
         </section>
 
-        <!-- Section 3: My Hobbies -->
+        <!-- Section 3: My Passions -->
         <section id="myHobbies">
             <h2>My Hobbies</h2>
             <p>Video Games: Starfield, Fortnite, and Red Dead Redemption 2</p>
@@ -172,6 +203,10 @@
         <section id="intenseFacts">
             <h2>Intense Facts</h2>
             <p>I married my high school sweetheart and we are awaiting our second child. I grew up in a cult. I had learning disabilities until 8th grade when I learned speed reading which allowed me a post graduate comprehension level. In 2021 my favorite color was gray.</p>
+        </section>
+
+        <section id="myMusic">
+            <iframe title="Apple Music Player" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="450" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/the-vibe/pl.u-oZyllDlsGEqpZrb"></iframe>
         </section>
 
         <footer>
