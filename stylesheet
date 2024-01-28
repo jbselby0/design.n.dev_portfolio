@@ -1,0 +1,137 @@
+/* This is my stylesheet */
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Belda';
+    src: url('insigne - Belda Norm Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins-semi';
+    src: url('Poppins-SemiBold.woff2') format('woff2');
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally within the header */
+    /* was too much background-color: #333; Dark background color */
+    color: #333; /* Dark Text color */
+    padding: 8px;
+    text-align: center;
+    top: 8px;
+    width: 100%;
+}
+
+h1{
+    font-family: 'Belda';
+    font-weight: bold;
+    margin: 0;
+}
+
+h2{
+    font-family: 'Poppins-semi';
+    font-weight: normal;
+    margin: 0;
+}
+
+#title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    justify-items: start;
+    padding: 8px;
+}
+
+/* Style the navigation links */
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+    justify-items: center;
+    width: fit-content;
+    max-width: 88%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 430px) {
+    nav {
+        grid-template-columns: repeat(2, 1fr); /* Adjust columns for mobile display */
+        max-width: 100%; /* Ensure full-width for mobile */
+        justify-items: start;
+    }
+
+    header {
+        margin: 0;
+    }
+
+    #title {
+        padding: 0;
+    }
+
+    main img {
+    display: block; /* Makes the image a block-level element */
+    margin: 0 auto; /* Centers the image horizontally */
+    width: 282px;
+    height: 423px;
+    border: 2 solid;
+    border-radius: 8px;
+}
+}
+
+/* Add rounded corners to the links */
+nav a {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: block;
+    text-align: center;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+/* Change link background color on hover */
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Style the main content */
+main {
+    background-color: #f5f5f5; /* Very light grey background color */
+    padding: 16px;
+    margin-top: 24px; /* Add margin to avoid content overlap with the fixed header */
+}
+
+iframe {
+    border: 2 solid;
+    border-radius: 8px;
+    width: max-content;
+}
+
+
+
+
+footer{
+    display: flex;
+    padding: .5rem 0px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: .75rem;
+}
